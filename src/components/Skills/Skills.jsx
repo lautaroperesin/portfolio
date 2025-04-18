@@ -25,7 +25,8 @@ export default function Skills() {
         ],
         'Herramientas': [
             { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-            { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
+            { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+            { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/firebase/firebase-original.svg' }
         ]
     };
 

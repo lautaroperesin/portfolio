@@ -2,6 +2,9 @@ import React from 'react';
 import './Projects.css';
 import ScrollArrow from '../ScrollArrow/ScrollArrow';
 import fotoClinica from '../../assets/images/clinica.png';
+import fotoSisTransporte from '../../assets/images/trasnporte.png';
+import fotoMenuDigital from '../../assets/images/menu-digital.png';
+import fotoVerificadorPrecios from '../../assets/images/verificador-precios.jpeg';
 
 export default function Projects() {
     const projects = [
@@ -13,28 +16,28 @@ export default function Projects() {
         },
         {
             title: "Sistema de Gestión de Transportes de Carga",
-            description: "Aplicación de escritorio para la gestión de una empresa de transportes de carga.",
-            image: "/project2.jpg",
+            description: "Aplicación de escritorio que permite registrar viajes, facturas y generar un balance de la contabilidad del negocio.",
+            image: fotoSisTransporte,
             technologies: ["WinForms", "C#", "Entity Framework", "SQLite"]
         },
         {
             title: "Verificador de Precios",
-            description: "Aplicación Android para una juguetería, permitiendo escanear productos mediante lectores de códigos de barras conectados a tablets. La app obtenía y mostraba en tiempo real información del producto, optimizando la consulta de precios dentro del local.",
-            image: "/project3.jpg",
+            description: "Aplicación Android para una juguetería, permitiendo escanear productos mediante lectores de códigos de barras conectados a tablets. La app obtenía y mostraba información del producto, optimizando la consulta de precios dentro del local.",
+            image: fotoVerificadorPrecios,
             technologies: ["Xamarin", "MySQL"],
             github: "https://github.com/lautaroperesin/barcode-scanner"
         },
         {
             title: "Menú Digital",
-            description: "Aplicación web para digitalizar el menú de restaurantes, permitiendo a los clientes visualizar productos, realizar pedidos y reservas. Implementando un panel de administración para que los dueños gestionen productos y reciban pedidos en tiempo real.",
-            image: "/project3.jpg",
+            description: "Aplicación web para digitalizar el menú de restaurantes, permitiendo a los clientes visualizar productos, realizar pedidos y reservas. Implementando un panel de administración para gestionar el negocio.",
+            image: fotoMenuDigital,
             technologies: ["NextJS", "NodeJS", "React", "MySQL"],
             liveDemo: "",
             github: "https://github.com/lautaroperesin/menu-digital"
         },
         {
             title: "Sistema de Control de Asistencia",
-            description: "Aplicación de escritorio para gestionar la asistencia de empleados, obteniendo registros de entrada y salida mediante un dispositivo biométrico conectado a través de red (IP y puerto).",
+            description: "Aplicación de escritorio para controlar la asistencia de empleados, obteniendo registros de entrada y salida mediante un dispositivo biométrico conectado a través de red (IP y puerto).",
             image: "/project3.jpg",
             technologies: ["WinForms", "C#", "SQLite"],
             liveDemo: "",
