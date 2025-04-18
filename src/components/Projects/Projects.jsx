@@ -5,18 +5,19 @@ import fotoClinica from '../../assets/images/clinica.png';
 import fotoSisTransporte from '../../assets/images/trasnporte.png';
 import fotoMenuDigital from '../../assets/images/menu-digital.png';
 import fotoVerificadorPrecios from '../../assets/images/verificador-precios.jpeg';
+import fotoControlAsistencia from '../../assets/images/control-asistencia.png';
 
 export default function Projects() {
     const projects = [
         {
             title: "Sistema de Gestión para Clínica",
-            description: "Aplicación de escritorio para la gestión de turnos, pacientes, médicos, obras sociales y generación de informes.",
+            description: "Aplicación de escritorio para administrar turnos médicos, pacientes, profesionales de la salud, prácticas médicas y obras sociales. Incluye funcionalidades como control de caja diaria, generación de informes y pantallas adaptadas según la especialidad médica. Optimiza el trabajo diario del personal de recepción y los profesionales.",
             image: fotoClinica,
             technologies: ["WinForms", "C#", "Entity Framework Core", "MySQL"]
         },
         {
             title: "Sistema de Gestión de Transportes de Carga",
-            description: "Aplicación de escritorio que permite registrar viajes, facturas y generar un balance de la contabilidad del negocio.",
+            description: "Aplicación de escritorio empresa de transporte de carga. Permite registrar viajes, empleados y facturación, así como generar balances contables de forma clara y eficiente. Ideal para llevar un control interno del movimiento logístico y administrativo del negocio.",
             image: fotoSisTransporte,
             technologies: ["WinForms", "C#", "Entity Framework", "SQLite"]
         },
@@ -38,7 +39,7 @@ export default function Projects() {
         {
             title: "Sistema de Control de Asistencia",
             description: "Aplicación de escritorio para controlar la asistencia de empleados, obteniendo registros de entrada y salida mediante un dispositivo biométrico conectado a través de red (IP y puerto).",
-            image: "/project3.jpg",
+            image: fotoControlAsistencia,
             technologies: ["WinForms", "C#", "SQLite"],
             liveDemo: "",
             github: "https://github.com/lautaroperesin/control-acceso-biometrico"
