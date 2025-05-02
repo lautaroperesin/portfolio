@@ -43,8 +43,8 @@ export default function About() {
                         <p className="about-description">
                         Apasionado por la tecnología, con experiencia en el desarrollo de 
                         aplicaciones web, móviles y de escritorio.<br/>
-                        Enfocado en el diseño de soluciones innovadoras que resuelvan problemas reales, 
-                        optimicen procesos y generen impacto en los usuarios.<br/>
+                        Enfocado en diseñar soluciones innovadoras que resuelvan problemas reales, 
+                        optimicen procesos y generen un impacto positivo en los usuarios.<br/>
                         </p>
                         <div className="about-cta">
                             <button className="primary-btn" onClick={handleDownloadCV}>
