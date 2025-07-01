@@ -41,10 +41,11 @@ export default function About() {
                         <h1>Lautaro Peresin</h1>
                         <h2>Desarrollador Full Stack</h2>
                         <p className="about-description">
-                        Apasionado por la tecnología, con experiencia en el desarrollo de 
-                        aplicaciones web, móviles y de escritorio.<br/>
-                        Enfocado en diseñar soluciones innovadoras que resuelvan problemas reales, 
-                        optimicen procesos y generen un impacto positivo en los usuarios.<br/>
+                        Me especializo en crear soluciones a medida, enfocadas en mejorar procesos, facilitar tareas
+                        y generar un impacto positivo en los usuarios.
+                        Cada proyecto es una oportunidad para aprender, crecer y aportar valor real. <br/>
+                        Con mi experiencia en el desarrollo de aplicaciones web, móviles y de escritorio,
+                        me enfoco en convertir ideas en herramientas funcionales<br/>
                         </p>
                         <div className="about-cta">
                             <button className="primary-btn" onClick={handleDownloadCV}>
