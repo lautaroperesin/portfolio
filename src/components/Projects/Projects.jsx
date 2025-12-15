@@ -6,9 +6,24 @@ import fotoSisTransporte from '../../assets/images/trasnporte.png';
 import fotoMenuDigital from '../../assets/images/menu-digital.png';
 import fotoVerificadorPrecios from '../../assets/images/verificador-precios.jpeg';
 import fotoControlAsistencia from '../../assets/images/control-asistencia.png';
+import fotoLogisticaWeb from '../../assets/images/logistica-web.png';
+import fotoGatoNegro from '../../assets/images/gato-negro.png';
 
 export default function Projects() {
     const projects = [
+        {
+            title: "Sistema de Gestión Logística",
+            description: "Sistema integral para optimizar la trazabilidad y administración de envíos en el sector agropecuario. Incluye autenticación por roles, seguimiento de envíos en tiempo real, gestión de entidades clave y despliegue en la nube. Plataformas: API REST con ASP.NET Core, app móvil para conductores (.NET MAUI) y portal web (Blazor).",
+            image: fotoLogisticaWeb,
+            github: "https://github.com/lautaroperesin/GestionLogistica",
+            technologies: ["ASP.NET Core", ".NET MAUI", "Blazor", "MySQL", "Firebase", "AWS EC2", "Azure"]
+        },
+        {
+            title: "Sistema de Ventas para Bar (POS)",
+            description: "Aplicación de escritorio para punto de venta (POS) y gestión administrativa de un bar. Soporta ventas rápidas al contado y cuentas abiertas, módulo de clientes con visualización de cuentas pendientes (incluye filtrado de morosos), gestión de inventario y flujo de caja con apertura/cierre.",
+            image: fotoGatoNegro,
+            technologies: ["WPF", "C#", "Entity Framework", "MySQL"]
+        },
         {
             title: "Sistema de Gestión para Clínica",
             description: "Aplicación de escritorio para administrar turnos médicos, pacientes, profesionales de la salud, prácticas médicas y obras sociales. Incluye funcionalidades como control de caja diaria, generación de informes y pantallas adaptadas según la especialidad médica. Optimiza el trabajo diario del personal de recepción y los profesionales.",
@@ -26,7 +41,6 @@ export default function Projects() {
             description: "Aplicación Android para una juguetería, permitiendo escanear productos mediante lectores de códigos de barras conectados a tablets. La app obtenía y mostraba información del producto, optimizando la consulta de precios dentro del local.",
             image: fotoVerificadorPrecios,
             technologies: ["Xamarin", "MySQL"],
-            github: "https://github.com/lautaroperesin/barcode-scanner"
         },
         {
             title: "Menú Digital",
@@ -57,7 +71,9 @@ export default function Projects() {
                     {projects.map((project, index) => (
                         <div className="project-card" key={index}>
                             <div className="project-image">
-                                <img src={project.image} alt={project.title} />
+                                {project.image && (
+                                    <img src={project.image} alt={project.title} />
+                                )}
                                 <div className="project-links">
                                     {project.github && (
                                         <a href={project.github} target="_blank" rel="noopener noreferrer">
