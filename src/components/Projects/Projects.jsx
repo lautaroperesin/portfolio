@@ -12,13 +12,6 @@ import fotoGatoNegro from '../../assets/images/gato-negro.png';
 export default function Projects() {
     const projects = [
         {
-            title: "Sistema de Gestión Logística",
-            description: "Sistema integral para optimizar la trazabilidad y administración de envíos en el sector agropecuario. Incluye autenticación por roles, seguimiento de envíos en tiempo real, gestión de entidades clave y despliegue en la nube. Plataformas: API REST con ASP.NET Core, app móvil para conductores (.NET MAUI) y portal web (Blazor).",
-            image: fotoLogisticaWeb,
-            github: "https://github.com/lautaroperesin/GestionLogistica",
-            technologies: ["ASP.NET Core", ".NET MAUI", "Blazor", "MySQL", "Firebase", "AWS EC2", "Azure"]
-        },
-        {
             title: "Sistema de Ventas para Bar (POS)",
             description: "Aplicación de escritorio para punto de venta (POS) y gestión administrativa de un bar. Soporta ventas rápidas al contado y cuentas abiertas, módulo de clientes con visualización de cuentas pendientes (incluye filtrado de morosos), gestión de inventario y flujo de caja con apertura/cierre.",
             image: fotoGatoNegro,
@@ -43,12 +36,11 @@ export default function Projects() {
             technologies: ["Xamarin", "MySQL"],
         },
         {
-            title: "Menú Digital",
-            description: "Aplicación web para digitalizar el menú de restaurantes, permitiendo a los clientes visualizar productos, realizar pedidos y reservas. Implementando un panel de administración para gestionar el negocio.",
-            image: fotoMenuDigital,
-            technologies: ["NextJS", "NodeJS", "React", "MySQL"],
-            liveDemo: "",
-            github: "https://github.com/lautaroperesin/menu-digital"
+            title: "Sistema de Gestión Logística",
+            description: "Sistema integral para optimizar la trazabilidad y administración de envíos en el sector agropecuario. Incluye autenticación por roles, seguimiento de envíos en tiempo real, gestión de entidades clave y despliegue en la nube. Plataformas: API REST con ASP.NET Core, app móvil para conductores (.NET MAUI) y portal web (Blazor).",
+            image: fotoLogisticaWeb,
+            github: "https://github.com/lautaroperesin/GestionLogistica",
+            technologies: ["ASP.NET Core", ".NET MAUI", "Blazor", "MySQL", "Firebase", "AWS EC2", "Azure"]
         },
         {
             title: "Sistema de Control de Asistencia",
@@ -57,7 +49,15 @@ export default function Projects() {
             technologies: ["WinForms", "C#", "SQLite"],
             liveDemo: "",
             github: "https://github.com/lautaroperesin/control-acceso-biometrico"
-        }
+        },
+        {
+            title: "Menú Digital",
+            description: "Aplicación web para digitalizar el menú de restaurantes, permitiendo a los clientes visualizar productos, realizar pedidos y reservas. Implementando un panel de administración para gestionar el negocio.",
+            image: fotoMenuDigital,
+            technologies: ["NextJS", "NodeJS", "React", "MySQL"],
+            liveDemo: "",
+            github: "https://github.com/lautaroperesin/menu-digital"
+        },
     ];
 
     return (
