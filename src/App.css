@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(#0c3b1b, #000000);
 }
 
@@ -11,6 +11,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  font-size: 90%; /* Reduce el tamaño base globalmente */
 }
 
 section {

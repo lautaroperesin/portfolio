@@ -12,17 +12,20 @@ export default function Contact() {
         setSending(true);
 
         emailjs.sendForm(
-            'service_qi2c34n',
-            'template_p76hnpi',
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
             form.current,
-            'yMhGfkY1lGMcTu4q-'
+            {
+                publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+            }
         )
         .then(() => {
             setSent(true);
             form.current.reset();
         })
         .catch((error) => {
-            console.error('Error:', error);
+            console.error('Error al enviar el email:', error);
+            alert('Hubo un error al enviar el mensaje. Por favor revisa la consola o intenta más tarde.');
         })
         .finally(() => {
             setSending(false);
