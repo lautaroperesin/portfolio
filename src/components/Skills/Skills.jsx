@@ -16,11 +16,12 @@ export default function Skills() {
         ],
         'Backend': [
             { name: 'C#', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg' },
-            { name: '.NET', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg' },
+            { name: 'ASP.NET Core', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg' },
             { name: 'Entity Framework Core', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg' },
+            //{ name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
             { name: 'NodeJS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
             { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/firebase/firebase-original.svg' },
-            { name: 'Supabase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/supabase/supabase-original.svg' },
+            { name: 'Supabase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/supabase/supabase-original.svg' }
         ],
         'Bases de Datos': [
             { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },

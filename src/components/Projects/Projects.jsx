@@ -8,6 +8,8 @@ import fotoVerificadorPrecios from '../../assets/images/verificador-precios.jpeg
 import fotoControlAsistencia from '../../assets/images/control-asistencia.png';
 import fotoLogisticaWeb from '../../assets/images/logistica-web.png';
 import fotoGatoNegro from '../../assets/images/gato-negro.png';
+import fotoScraper from '../../assets/images/scraper.png';
+
 
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -48,15 +50,21 @@ export default function Projects() {
             description: "Aplicación de escritorio para controlar la asistencia de empleados, obteniendo registros de entrada y salida mediante un dispositivo biométrico conectado a través de red (IP y puerto).",
             image: fotoControlAsistencia,
             technologies: ["WinForms", "C#", "SQLite"],
-            liveDemo: "",
             github: "https://github.com/lautaroperesin/control-acceso-biometrico"
+        },
+        {
+            image: fotoScraper,
+            title: "Scraper de Inmobiliarias + Bot de Telegram",
+            description:
+                "Herramienta que desarollé para ahorrarme tiempo buscando por mi cuenta: cada hora scrapea sitios de inmobiliarias de Santa Fe, detecta nuevas publicaciones y me notifica por Telegram. Guarda los departamentos ya vistos en un JSON para no volver a enviarlos.",
+            technologies: ["Python", "BeautifulSoup", "Requests", "Telegram Bot API"],
+            github: "https://github.com/lautaroperesin/scraping-departamentos"
         },
         {
             title: "Menú Digital",
             description: "Aplicación web para digitalizar el menú de restaurantes, permitiendo a los clientes visualizar productos, realizar pedidos y reservas. Implementando un panel de administración para gestionar el negocio.",
             image: fotoMenuDigital,
             technologies: ["NextJS", "NodeJS", "React", "MySQL"],
-            liveDemo: "",
             github: "https://github.com/lautaroperesin/menu-digital"
         },
     ];
