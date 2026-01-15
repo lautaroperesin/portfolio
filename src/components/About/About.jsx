@@ -2,13 +2,13 @@ import React from 'react'
 import './About.css'
 import foto from '../../assets/images/foto-perfil-traje.jpeg'
 import ScrollArrow from '../ScrollArrow/ScrollArrow';
-import cvFile from '../../assets/Lautaro-Peresin-CV.pdf';
+import cvFile from '../../assets/Lautaro_Peresin_CV.pdf';
 
 export default function About() {
     const handleDownloadCV = () => {
         const link = document.createElement('a');
         link.href = cvFile;
-        link.download = 'Lautaro-Peresin-CV.pdf';
+        link.download = 'Lautaro_Peresin_CV.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

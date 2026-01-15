@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Projects.css';
 import ScrollArrow from '../ScrollArrow/ScrollArrow';
 import fotoClinica from '../../assets/images/clinica.png';
@@ -10,10 +10,11 @@ import fotoLogisticaWeb from '../../assets/images/logistica-web.png';
 import fotoGatoNegro from '../../assets/images/gato-negro.png';
 
 export default function Projects() {
+    const [selectedProject, setSelectedProject] = useState(null);
     const projects = [
         {
             title: "Sistema de Ventas para Bar (POS)",
-            description: "Aplicación de escritorio para punto de venta (POS) y gestión administrativa de un bar. Soporta ventas rápidas al contado y cuentas abiertas, módulo de clientes con visualización de cuentas pendientes (incluye filtrado de morosos), gestión de inventario y flujo de caja con apertura/cierre.",
+            description: "Sistema completo de punto de venta y administración para bar. Permite realizar ventas rápidas al contado o gestionar cuentas abiertas por cliente, llevar el control de inventario en tiempo real, administrar el flujo de caja con apertura y cierre de caja diario, y gestionar clientes con visualización de cuentas pendientes y reporte de morosos. Todo integrado en una sola aplicación de escritorio optimizada para el trabajo diario del personal del bar.",
             image: fotoGatoNegro,
             technologies: ["WPF", "C#", "Entity Framework", "MySQL"]
         },
@@ -25,7 +26,7 @@ export default function Projects() {
         },
         {
             title: "Sistema de Gestión de Transportes de Carga",
-            description: "Aplicación de escritorio empresa de transporte de carga. Permite registrar viajes, empleados y facturación, así como generar balances contables de forma clara y eficiente. Ideal para llevar un control interno del movimiento logístico y administrativo del negocio.",
+            description: "La aplicación permite registrar viajes, empleados y facturación, así como generar balances contables de forma clara y eficiente. Ideal para llevar un control interno del movimiento logístico y administrativo del negocio.",
             image: fotoSisTransporte,
             technologies: ["WinForms", "C#", "Entity Framework", "SQLite"]
         },
@@ -69,39 +70,114 @@ export default function Projects() {
                 </div>
                 <div className="projects-grid">
                     {projects.map((project, index) => (
-                        <div className="project-card" key={index}>
-                            <div className="project-image">
-                                {project.image && (
-                                    <img src={project.image} alt={project.title} />
-                                )}
-                                <div className="project-links">
-                                    {project.github && (
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                            GitHub
-                                        </a>
-                                    )}
-                                    {project.liveDemo && (
-                                        <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
-                                            Demo
-                                        </a>
-                                    )}
+                        <article
+                            className="project-card"
+                            key={index}
+                            onClick={() => setSelectedProject(project)}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    setSelectedProject(project);
+                                }
+                            }}
+                        >
+                            {project.image && (
+                                <div className="project-image-container">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        loading="lazy"
+                                    />
                                 </div>
-                            </div>
-                            <div className="project-info">
-                                <h3>{project.title}</h3>
-                                <p>{project.description}</p>
+                            )}
+                            <div className="project-content">
+                                <h3 className="project-title">{project.title}</h3>
                                 <div className="project-technologies">
                                     {project.technologies.map((tech, techIndex) => (
-                                        <span key={techIndex} className="tech-tag">
+                                        <span key={techIndex} className="tech-badge">
                                             {tech}
                                         </span>
                                     ))}
                                 </div>
+                                <button
+                                    type="button"
+                                    className="project-cta"
+                                >
+                                    Más información
+                                </button>
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>
+            {selectedProject && (
+                <div
+                    className="project-modal-backdrop"
+                    onClick={() => setSelectedProject(null)}
+                >
+                    <div
+                        className="project-modal"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            type="button"
+                            className="project-modal-close"
+                            onClick={() => setSelectedProject(null)}
+                            aria-label="Cerrar"
+                        >
+                            ×
+                        </button>
+                        {selectedProject.image && (
+                            <div className="project-modal-image">
+                                <img
+                                    src={selectedProject.image}
+                                    alt={selectedProject.title}
+                                />
+                            </div>
+                        )}
+                        <div className="project-modal-content">
+                            <h3 className="project-modal-title">
+                                {selectedProject.title}
+                            </h3>
+                            <div className="project-technologies">
+                                {selectedProject.technologies.map((tech, index) => (
+                                    <span key={index} className="tech-badge">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                            <p className="project-modal-description">
+                                {selectedProject.description}
+                            </p>
+                            {(selectedProject.github || selectedProject.liveDemo) && (
+                                <div className="project-modal-links">
+                                    {selectedProject.github && (
+                                        <a
+                                            href={selectedProject.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <i className="fab fa-github" />
+                                            <span>Código</span>
+                                        </a>
+                                    )}
+                                    {selectedProject.liveDemo && (
+                                        <a
+                                            href={selectedProject.liveDemo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <i className="fas fa-external-link-alt" />
+                                            <span>Demo</span>
+                                        </a>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            )}
             <ScrollArrow targetId="contact" />
         </section>
     );
