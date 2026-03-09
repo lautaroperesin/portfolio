@@ -9,11 +9,21 @@ import fotoControlAsistencia from '../../assets/images/control-asistencia.png';
 import fotoLogisticaWeb from '../../assets/images/logistica-web.png';
 import fotoGatoNegro from '../../assets/images/gato-negro.png';
 import fotoScraper from '../../assets/images/scraper.png';
+import fotoProdear from '../../assets/images/prodear.png';
+import fotoNina from '../../assets/images/nina.png';
 
 
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState(null);
+    const [showAll, setShowAll] = useState(false);
     const projects = [
+        {
+            title: "Prodear",
+            description: "Aplicación web para realizar pronósticos de partidos de fútbol. Permite a los usuarios seleccionar torneos, hacer predicciones sobre resultados, ver el ranking de posiciones y seguir el desempeño de sus pronósticos en tiempo real. Incluye notificaciones de próximos partidos y sistema de puntuación basado en aciertos.",
+            technologies: ["Next.js", "FastAPI", "PostgreSQL"],
+            liveDemo: "https://prodear.vercel.app/",
+            image: fotoProdear
+        },
         {
             title: "Sistema de Ventas para Bar (POS)",
             description: "Sistema completo de punto de venta y administración para bar. Permite realizar ventas rápidas al contado o gestionar cuentas abiertas por cliente, llevar el control de inventario en tiempo real, administrar el flujo de caja con apertura y cierre de caja diario, y gestionar clientes con visualización de cuentas pendientes y reporte de morosos. Todo integrado en una sola aplicación de escritorio optimizada para el trabajo diario del personal del bar.",
@@ -25,6 +35,12 @@ export default function Projects() {
             description: "Aplicación de escritorio para administrar turnos médicos, pacientes, profesionales de la salud, prácticas médicas y obras sociales. Incluye funcionalidades como control de caja diaria, generación de informes y pantallas adaptadas según la especialidad médica. Optimiza el trabajo diario del personal de recepción y los profesionales.",
             image: fotoClinica,
             technologies: ["WinForms", "C#", "Entity Framework Core", "MySQL"]
+        },
+        {
+            title: "Sistema de Ventas - Alimentos Balanceados",
+            description: "Sistema completo de gestión para un emprendimiento de venta de alimentos balanceados. Permite registrar ventas, controlar la caja diaria, gestionar el stock de productos, administrar proveedores y clientes, generar reportes de ventas y realizar seguimiento de cuentas corrientes.",
+            image: fotoNina,
+            technologies: ["WPF", "C#", "Entity Framework", "SQLite"]
         },
         {
             title: "Sistema de Gestión de Transportes de Carga",
@@ -77,7 +93,7 @@ export default function Projects() {
                     <div className="title-underline"></div>
                 </div>
                 <div className="projects-grid">
-                    {projects.map((project, index) => (
+                    {(showAll ? projects : projects.slice(0, 6)).map((project, index) => (
                         <article
                             className="project-card"
                             key={index}
@@ -118,6 +134,15 @@ export default function Projects() {
                         </article>
                     ))}
                 </div>
+                {projects.length > 6 && (
+                    <button
+                        type="button"
+                        className="view-all-btn"
+                        onClick={() => setShowAll(!showAll)}
+                    >
+                        {showAll ? 'Ver menos' : 'Ver todos'}
+                    </button>
+                )}
             </div>
             {selectedProject && (
                 <div
@@ -177,7 +202,7 @@ export default function Projects() {
                                             rel="noopener noreferrer"
                                         >
                                             <i className="fas fa-external-link-alt" />
-                                            <span>Demo</span>
+                                            <span>Link</span>
                                         </a>
                                     )}
                                 </div>
