@@ -314,6 +314,28 @@
     background: #3d8b5f;
 }
 
+/* View All Button */
+.view-all-btn {
+    display: block;
+    margin: 40px auto 0;
+    padding: 12px 32px;
+    border-radius: 999px;
+    border: 2px solid #4fb076;
+    background: transparent;
+    color: #4fb076;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background: #4fb076;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(79, 176, 118, 0.3);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .projects {
