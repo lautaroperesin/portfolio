@@ -54,7 +54,7 @@
 }
 
 .social-links a:hover {
-    color: #4fb076;
+    color: #2563eb;
     transform: translateY(-3px);
 }
 
@@ -108,24 +108,24 @@
 }
 
 .primary-btn {
-    background: #4fb076;
+    background: #2563eb;
     color: white;
     border: none;
 }
 
 .secondary-btn {
     background: transparent;
-    color: #4fb076;
-    border: 2px solid #4fb076;
+    color: #2563eb;
+    border: 2px solid #2563eb;
 }
 
 .primary-btn:hover {
-    background: #3d8b5f;
+    background: #1d4ed8;
     transform: translateY(-2px);
 }
 
 .secondary-btn:hover {
-    background: #4fb07610;
+    background: #2563eb10;
     transform: translateY(-2px);
 }
 

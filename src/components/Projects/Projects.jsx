@@ -43,16 +43,16 @@ export default function Projects() {
             technologies: ["WPF", "C#", "Entity Framework", "SQLite"]
         },
         {
-            title: "Sistema de Gestión de Transportes de Carga",
-            description: "La aplicación permite registrar viajes, empleados y facturación, así como generar balances contables de forma clara y eficiente. Ideal para llevar un control interno del movimiento logístico y administrativo del negocio.",
-            image: fotoSisTransporte,
-            technologies: ["WinForms", "C#", "Entity Framework", "SQLite"]
-        },
-        {
             title: "Verificador de Precios",
             description: "Aplicación Android para una juguetería, permitiendo escanear productos mediante lectores de códigos de barras conectados a tablets. La app obtenía y mostraba información del producto, optimizando la consulta de precios dentro del local.",
             image: fotoVerificadorPrecios,
             technologies: ["Xamarin", "MySQL"],
+        },
+        {
+            title: "Sistema de Gestión de Transportes de Carga",
+            description: "La aplicación permite registrar viajes, empleados y facturación, así como generar balances contables de forma clara y eficiente. Ideal para llevar un control interno del movimiento logístico y administrativo del negocio.",
+            image: fotoSisTransporte,
+            technologies: ["WinForms", "C#", "Entity Framework", "SQLite"]
         },
         {
             title: "Sistema de Gestión Logística",
@@ -62,6 +62,14 @@ export default function Projects() {
             technologies: ["ASP.NET Core", ".NET MAUI", "Blazor", "MySQL", "Firebase", "AWS EC2", "Azure"]
         },
         {
+            image: fotoScraper,
+            title: "Scraper de Inmobiliarias + Bot de Telegram",
+            description:
+                "Herramienta que desarollé para ahorrarme tiempo buscando por mi cuenta: cada hora scrapea sitios de inmobiliarias de Santa Fe, detecta nuevas publicaciones y me notifica por Telegram. Guarda los departamentos ya vistos en un JSON para no volver a enviarlos.",
+            technologies: ["Python", "BeautifulSoup", "Telegram Bot API"],
+            github: "https://github.com/lautaroperesin/scraping-departamentos"
+        },
+        {
             title: "Sistema de Control de Asistencia",
             description: "Aplicación de escritorio para controlar la asistencia de empleados, obteniendo registros de entrada y salida mediante un dispositivo biométrico conectado a través de red (IP y puerto).",
             image: fotoControlAsistencia,
@@ -69,18 +77,10 @@ export default function Projects() {
             github: "https://github.com/lautaroperesin/control-acceso-biometrico"
         },
         {
-            image: fotoScraper,
-            title: "Scraper de Inmobiliarias + Bot de Telegram",
-            description:
-                "Herramienta que desarollé para ahorrarme tiempo buscando por mi cuenta: cada hora scrapea sitios de inmobiliarias de Santa Fe, detecta nuevas publicaciones y me notifica por Telegram. Guarda los departamentos ya vistos en un JSON para no volver a enviarlos.",
-            technologies: ["Python", "BeautifulSoup", "Requests", "Telegram Bot API"],
-            github: "https://github.com/lautaroperesin/scraping-departamentos"
-        },
-        {
             title: "Menú Digital",
             description: "Aplicación web para digitalizar el menú de restaurantes, permitiendo a los clientes visualizar productos, realizar pedidos y reservas. Implementando un panel de administración para gestionar el negocio.",
             image: fotoMenuDigital,
-            technologies: ["NextJS", "NodeJS", "React", "MySQL"],
+            technologies: ["Next.js", "Node.js", "Tailwind CSS", "MySQL"],
             github: "https://github.com/lautaroperesin/menu-digital"
         },
     ];
@@ -93,7 +93,7 @@ export default function Projects() {
                     <div className="title-underline"></div>
                 </div>
                 <div className="projects-grid">
-                    {(showAll ? projects : projects.slice(0, 6)).map((project, index) => (
+                    {projects.slice(0, showAll ? projects.length : 5).map((project, index) => (
                         <article
                             className="project-card"
                             key={index}
@@ -133,16 +133,25 @@ export default function Projects() {
                             </div>
                         </article>
                     ))}
+                    {!showAll && projects.length > 5 && (
+                        <article
+                            className="project-card view-more-card"
+                            onClick={() => setShowAll(true)}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    setShowAll(true);
+                                }
+                            }}
+                        >
+                            <div className="view-more-content">
+                                <span className="view-more-text">Ver todo</span>
+                                <span className="view-more-dots">...</span>
+                            </div>
+                        </article>
+                    )}
                 </div>
-                {projects.length > 6 && (
-                    <button
-                        type="button"
-                        className="view-all-btn"
-                        onClick={() => setShowAll(!showAll)}
-                    >
-                        {showAll ? 'Ver menos' : 'Ver todos'}
-                    </button>
-                )}
             </div>
             {selectedProject && (
                 <div

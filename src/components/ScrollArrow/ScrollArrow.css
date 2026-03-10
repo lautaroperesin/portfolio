@@ -9,13 +9,13 @@
 
 .scroll-arrow i {
     font-size: 2rem;
-    color: #4fb076;
+    color: #2563eb;
     transition: all 0.3s ease;
 }
 
 .scroll-arrow:hover i {
     transform: translateY(5px);
-    color: #3d8b5f;
+    color: #1d4ed8;
 }
 
 @keyframes bounce {

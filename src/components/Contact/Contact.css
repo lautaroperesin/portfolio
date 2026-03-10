@@ -50,7 +50,7 @@
 .contact-item i {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #4fb076;
+    color: #2563eb;
 }
 
 .contact-item h3 {
@@ -59,7 +59,7 @@
 }
 
 .contact-item a {
-    color: #4fb076;
+    color: #2563eb;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -99,14 +99,14 @@
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #4fb076;
+    border-color: #2563eb;
     background: rgba(255, 255, 255, 0.15);
 }
 
 button {
     width: 100%;
     padding: 12px;
-    background: #4fb076;
+    background: #2563eb;
     color: white;
     border: none;
     border-radius: 5px;
@@ -116,7 +116,7 @@ button {
 }
 
 button:hover {
-    background: #3d8b5f;
+    background: #1d4ed8;
 }
 
 button:disabled {
@@ -126,7 +126,7 @@ button:disabled {
 
 .success-message {
     text-align: center;
-    color: #4fb076;
+    color: #2563eb;
     margin-top: 15px;
 }
 

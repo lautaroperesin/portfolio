@@ -8,7 +8,7 @@
 }
 
 .projects-container {
-    max-width: 1400px; /* Wider container for better grid */
+    max-width: 1200px; /* Same width as Skills section */
     width: 100%;
     margin: 0 auto;
 }
@@ -29,15 +29,15 @@
 .title-underline {
     width: 80px;
     height: 4px;
-    background: #4fb076;
+    background: #2563eb;
     margin: 0 auto;
     border-radius: 2px;
 }
 
-/* Modern Grid Layout - No internal scrolling */
+/* Modern Grid Layout - 3 columns for symmetrical display */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 10px;
 }
@@ -61,7 +61,7 @@
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border-color: rgba(79, 176, 118, 0.3);
+    border-color: rgba(37, 99, 235, 0.3);
     background: rgba(255, 255, 255, 0.05);
 }
 
@@ -138,7 +138,7 @@
 }
 
 .project-links a:hover {
-    background: #4fb076;
+    background: #2563eb;
     color: white;
     transform: scale(1.1);
 }
@@ -168,19 +168,19 @@
 }
 
 .tech-badge {
-    background: rgba(79, 176, 118, 0.15);
-    color: #4fb076;
+    background: rgba(37, 99, 235, 0.15);
+    color: #2563eb;
     padding: 6px 12px;
     border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 500;
-    border: 1px solid rgba(79, 176, 118, 0.2);
+    border: 1px solid rgba(37, 99, 235, 0.2);
     transition: all 0.2s ease;
 }
 
 .project-card:hover .tech-badge {
-    background: rgba(79, 176, 118, 0.25);
-    border-color: rgba(79, 176, 118, 0.4);
+    background: rgba(37, 99, 235, 0.25);
+    border-color: rgba(37, 99, 235, 0.4);
 }
 
 /* Description */
@@ -201,7 +201,7 @@
     padding: 8px 16px;
     border-radius: 999px;
     border: none;
-    background: #4fb076;
+    background: #2563eb;
     color: #fff;
     font-size: 0.85rem;
     font-weight: 500;
@@ -210,7 +210,7 @@
 }
 
 .project-cta:hover {
-    background: #3d8b5f;
+    background: #1d4ed8;
     transform: translateY(-1px);
 }
 
@@ -226,7 +226,7 @@
 }
 
 .project-modal {
-    background: rgba(10, 30, 18, 0.98);
+    background: rgba(15, 23, 42, 0.98);
     border-radius: 24px;
     max-width: 960px;
     width: 100%;
@@ -304,14 +304,14 @@
     gap: 8px;
     padding: 8px 14px;
     border-radius: 999px;
-    background: #4fb076;
+    background: #2563eb;
     color: #fff;
     text-decoration: none;
     font-size: 0.9rem;
 }
 
 .project-modal-links a:hover {
-    background: #3d8b5f;
+    background: #1d4ed8;
 }
 
 /* View All Button */
@@ -320,9 +320,9 @@
     margin: 40px auto 0;
     padding: 12px 32px;
     border-radius: 999px;
-    border: 2px solid #4fb076;
+    border: 2px solid #2563eb;
     background: transparent;
-    color: #4fb076;
+    color: #2563eb;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -330,10 +330,45 @@
 }
 
 .view-all-btn:hover {
-    background: #4fb076;
+    background: #2563eb;
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(79, 176, 118, 0.3);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* View More Card */
+.view-more-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    cursor: pointer;
+    background: rgba(37, 99, 235, 0.02);
+    border: 2px dashed rgba(37, 99, 235, 0.3);
+}
+
+.view-more-card:hover {
+    background: rgba(37, 99, 235, 0.05);
+    border-color: rgba(37, 99, 235, 0.5);
+}
+
+.view-more-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.view-more-text {
+    color: #2563eb;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.view-more-dots {
+    color: #2563eb;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
 }
 
 /* Responsive */

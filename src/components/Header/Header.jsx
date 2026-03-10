@@ -60,7 +60,7 @@ export default function Header() {
                 <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                     <ul>
                         <li><a href="#about" onClick={handleNavClick}>Sobre mí</a></li>
-                        <li><a href="#skills" onClick={handleNavClick}>Habilidades</a></li>
+                        <li><a href="#skills" onClick={handleNavClick}>Stack Tecnológico</a></li>
                         <li><a href="#projects" onClick={handleNavClick}>Proyectos</a></li>
                         <li><a href="#contact" onClick={handleNavClick}>Contacto</a></li>
                     </ul>
